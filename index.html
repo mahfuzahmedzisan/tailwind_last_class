@@ -1,14 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind Css</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
-    <h1>This is tailwind project</h1>
-    <div class="btn btn-primary">Click me</div>
+    <header class="fixed top-0 left-0 z-50 w-full bg-red-50/80 backdrop-blur-xl">
+        <div class="container mx-auto">
+            <div class="navbar bg-red-500">
+
+                <div class="navbar-start">
+                    <a href="/">Portfolio</a>
+                </div>
+
+                <div class="navbar-end ">
+                    <nav class="hidden sm:flex items-center justify-end gap-2">
+                        <a href=""
+                            class="px-2 py-1 bg-color-primary/20 hover:bg-color-primary text-text-primary rounded-md transition-all duration-300 text-nowrap">About
+                            Me</a>
+                        <a href=""
+                            class="px-2 py-1 bg-color-primary/20 hover:bg-color-primary text-text-primary rounded-md transition-all duration-300 text-nowrap">Resume</a>
+                        <a href=""
+                            class="px-2 py-1 bg-color-primary/20 hover:bg-color-primary text-text-primary rounded-md transition-all duration-300 text-nowrap">Portfolios</a>
+                        <a href=""
+                            class="px-2 py-1 bg-color-primary/20 hover:bg-color-primary text-text-primary rounded-md transition-all duration-300 text-nowrap">Testimonial</a>
+                        <a href=""
+                            class="px-2 py-1 bg-color-primary/20 hover:bg-color-primary text-text-primary rounded-md transition-all duration-300 text-nowrap">Contact</a>
+                    </nav>
+
+                    <div class="drawer sm:hidden justify-end drawer-end">
+                        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+                        <div
+                            class="drawer-content bg-red-50 hover:bg-red-200 transition-all duration-300 rounded-md p-2">
+                            <!-- Page content here -->
+                            <label for="my-drawer" class="drawer-button">
+                                <i class="fa-solid fa-bars"></i>
+                            </label>
+                        </div>
+                        <div class="drawer-side">
+                            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                            <nav
+                                class="bg-red-50 text-base-content min-h-full w-80 p-4 flex flex-col items-start justify-start space-y-2">
+                                <a href=""
+                                    class="px-2 py-1 bg-color-primary/20 hover:bg-color-primary text-text-primary rounded-md transition-all duration-300 text-nowrap w-full">About
+                                    Me</a>
+                                <a href=""
+                                    class="px-2 py-1 bg-color-primary/20 hover:bg-color-primary text-text-primary rounded-md transition-all duration-300 text-nowrap w-full">Resume</a>
+                                <a href=""
+                                    class="px-2 py-1 bg-color-primary/20 hover:bg-color-primary text-text-primary rounded-md transition-all duration-300 text-nowrap w-full">Portfolios</a>
+                                <a href=""
+                                    class="px-2 py-1 bg-color-primary/20 hover:bg-color-primary text-text-primary rounded-md transition-all duration-300 text-nowrap w-full">Testimonial</a>
+                                <a href=""
+                                    class="px-2 py-1 bg-color-primary/20 hover:bg-color-primary text-text-primary rounded-md transition-all duration-300 text-nowrap w-full">Contact</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero area -->
+        <section class="min-h-screen flex items-center justify-center">
+            <div class="container mx-auto flex items-center justify-between flex-col-reverse lg:flex-row gap-10 mt-20">
+                <!-- About me  -->
+                <div class="flex-1">
+                    <h2 class="text-xl font-bold">Hello! I am <span
+                            class="text-red-800 font-extrabold hover:text-red-900 transition-all duration-300">Your
+                            Name</span></h2>
+                    <p class="text-sm pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas cupiditate
+                        sapiente excepturi iste
+                        facilis reprehenderit corrupti eius, voluptatibus perferendis voluptatem omnis nulla similique
+                        dicta consequuntur obcaecati repudiandae ea blanditiis ad eos! Earum, consequuntur molestias
+                        voluptates perferendis pariatur, eligendi quo nihil nobis delectus voluptatibus inventore nemo
+                        dolores quidem rerum repudiandae aspernatur!</p>
+                </div>
+
+                <div class="flex-1 flex items-center justify-center">
+                    <img src="/assets/images/profile.jpg" alt="Profile"
+                        class="w-auto h-96 hover:rotate-6 transition-all duration-300 rounded-md shadow-lg shadow-red-500">
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-10">
+            <div class="container mx-auto">
+                <h2 class="text-2xl text-text-primary text-center font-medium border-b border-amber-300 mb-4">My
+                    Services</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
+                    <div class="card bg-base-100 w-auto shadow-sm">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Card Title</h2>
+                            <p>A card component has a figure, a body part, and inside body there are title and actions
+                                parts</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-auto shadow-sm">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Card Title</h2>
+                            <p>A card component has a figure, a body part, and inside body there are title and actions
+                                parts</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-auto shadow-sm">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Card Title</h2>
+                            <p>A card component has a figure, a body part, and inside body there are title and actions
+                                parts</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-auto shadow-sm">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Card Title</h2>
+                            <p>A card component has a figure, a body part, and inside body there are title and actions
+                                parts</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-auto shadow-sm">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Card Title</h2>
+                            <p>A card component has a figure, a body part, and inside body there are title and actions
+                                parts</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-auto shadow-sm">
+                        <figure>
+                            <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                                alt="Shoes" />
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Card Title</h2>
+                            <p>A card component has a figure, a body part, and inside body there are title and actions
+                                parts</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+
+
+
 </body>
+
 </html>
